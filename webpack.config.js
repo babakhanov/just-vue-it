@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
+const ASSET_PATH = NODE_ENV === 'production' ? 'https://babakhanov.github.io/just-vue-it/' : '/';
 
 module.exports = {
   context: __dirname + '/src',
@@ -12,7 +13,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, './docs'),
-    publicPath: NODE_ENV == 'production' ? 'https://babakhanov.github.io/just-vue-it/' : '/',
+    publicPath: ASSET_PATH,
     filename: '[name]-[hash].js',
   },
 
@@ -44,6 +45,7 @@ module.exports = {
               loader: 'sass-loader',
               options: {
                 sourceMap: false,
+                data: '$asset_path: "' + ASSET_PATH + '";',
                 sourceComments: NODE_ENV !== 'production'
               }
             }

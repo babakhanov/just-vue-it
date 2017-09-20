@@ -1,5 +1,5 @@
 require.context("./fonts", true, /\.(eot|ttf|svg|woff)$/);
-require.context("./images", true, /\.(jpg|png|svg|jpg)$/);
+//require.context("./images", true, /\.(jpg|png|svg|jpg)$/);
 require('./stylesheets/main.scss');
 
 import Reveal from 'reveal.js';
