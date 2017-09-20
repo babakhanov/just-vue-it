@@ -24,11 +24,11 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/
       },{
-        test: /\.jade$/,
+        test: /\.pug$/,
         loader: 'pug-loader'
       }, {
         test: /\.(eot|woff|woff2|ttf|svg|png|gif|jpg)$/,
-        loader: 'file-loader?name=[path][name].[ext]'
+        loader: 'file-loader?name=[name].[ext]'
       },{
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
@@ -66,7 +66,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.jade',
+      template: 'index.pug',
     }),
     new ExtractTextPlugin("style-[hash].css"),
     new webpack.DefinePlugin({
