@@ -8,3 +8,12 @@
 @import "icomoon/core";
 @import "icomoon/main";
 @import "icomoon/icons";
+
+@import "~reveal.js/css/reveal.css";
+@import "~reveal.js/css/theme/solarized.css";
+@import "~highlight.js/styles/solarized-dark.css";
+
+.reveal section img.inline-pic {
+  box-shadow: none;
+  border: 0;
+}
