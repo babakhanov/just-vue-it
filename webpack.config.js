@@ -28,7 +28,7 @@ module.exports = {
         test: /\.pug$/,
         loader: 'pug-loader'
       }, {
-        test: /\.(eot|woff|woff2|ttf|svg|png|gif|jpg)$/,
+        test: /\.(json|eot|woff|woff2|ttf|svg|png|gif|jpg)$/,
         loader: 'file-loader?name=[name].[ext]'
       },{
         test: /\.scss$/,

@@ -5,5 +5,29 @@ section
     h4 computed, watch, $refs, $data
     iframe(width="100%" height="300" src="//jsfiddle.net/babakhanov/htL7qd3b/embedded/js,html,result/" allowfullscreen="allowfullscreen" frameborder="0")
   section
-    h4 lifecycle hooks
+    h4 computed getters and setters
+    pre
+      code.hljs.javascript
+        = require('raw-loader!../snippets/computed_getter_setter.js.txt')
+
+  section
+    h4 Reactivity
+    img.inline-pic(src=require('../images/react.png'))
+
+  section
+    h4 Lifecycle
+    img.inline-pic(src=require('../images/vue-lifecycle.png'))
+
+  section
+    h4 Lifecycle hooks
     iframe(width="100%" height="300" src="//jsfiddle.net/babakhanov/9r8xq9d9/1/embedded/js,html,result/" allowfullscreen="allowfullscreen" frameborder="0")
+
+  section
+    h4 Official Docs
+    ul
+      li
+        | The Vue Instance: 
+        a(target='_blank' href='http://vuejs.org/guide/instance.html', rel='nofollow') http://vuejs.org/guide/instance.html
+      li
+        | Reactivity in Depth: 
+        a(target='_blank' href='http://vuejs.org/guide/reactivity.html', rel='nofollow') http://vuejs.org/guide/reactivity.html

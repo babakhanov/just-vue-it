@@ -2,6 +2,7 @@ require.context("./fonts", true, /\.(eot|ttf|svg|woff)$/);
 require.context("reveal.js/lib/font/league-gothic", true, /\.(eot|ttf|svg|woff)$/);
 //require.context("./images", true, /\.(jpg|png|svg|jpg)$/);
 require('./stylesheets/main.scss');
+require('./data/users.json');
 
 import Reveal from 'reveal.js';
 import hljs from 'highlight.js/lib/highlight.js';
