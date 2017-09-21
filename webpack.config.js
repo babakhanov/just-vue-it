@@ -1,9 +1,10 @@
-const path              = require('path')
-const webpack           = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path                  = require('path')
+const webpack               = require('webpack')
+const HtmlWebpackPlugin     = require('html-webpack-plugin');
+const ExtractTextPlugin     = require('extract-text-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
-const NODE_ENV = process.env.NODE_ENV || 'development';
+const NODE_ENV   = process.env.NODE_ENV || 'development';
 const ASSET_PATH = NODE_ENV === 'production' ? 'https://babakhanov.github.io/just-vue-it/' : '/';
 
 module.exports = {
@@ -65,6 +66,22 @@ module.exports = {
   devtool: '#eval-source-map',
 
   plugins: [
+    new FaviconsWebpackPlugin({
+      logo: './images/logo.png',
+      title: 'Just vue it',
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        opengraph: false,
+        twitter: false,
+        yandex: false,
+        windows: false
+      }
+    }),
     new HtmlWebpackPlugin({
       template: 'index.pug',
     }),
