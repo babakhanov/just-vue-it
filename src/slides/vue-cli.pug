@@ -6,3 +6,75 @@ section
     pre
       code.hljs.shell
         = require('raw-loader!../snippets/install.sh.txt')
+    div(style='display: flex')
+      div(style='flex: 0 0 25%; text-align: center;')
+        h4 simple
+        div index.html + Vue CDN import
+      div(style='flex: 0 0 25%; text-align: center;')
+        h4 webpack-simple
+        div Basic webpack workflow
+      div(style='flex: 0 0 25%; text-align: center;')
+        h4 webpack
+        div Complex webpack workflow (incl. Testing)
+      div(style='flex: 0 0 25%; text-align: center;')
+        h4 browserify / browserify-simple
+        div Browserify Workflows
+  section
+    h4 vue-cli
+    pre
+      code.hljs.shell.
+        | $ vue init webpack-simple testapp
+        | $ cd testapp
+        | $ npm install
+        | $ npm run dev
+  section
+    h4 created project
+    img.inline-pic(src=require('../images/vuehello.png'))
+  section
+    h4 created project
+    img.inline-pic(src=require('../images/vuestorm.png'))
+  section
+    h4 main.js
+    pre
+      code.hljs.javascript
+        = require('raw-loader!../snippets/vuemain.js.txt')
+  section
+    h4 App.vue (Single File Components)
+    pre
+      code.hljs.xml
+        = require('raw-loader!../snippets/App.vue.txt')
+  section
+    h4 Out
+    pre
+      code.hljs.javascript
+        = require('raw-loader!../snippets/vue_compiled.js.txt')
+  section
+    h4 Build
+    pre
+      code.hljs.shell
+        | $ npm run build
+    div build.js 90kb - 33kb gzipped
+    pre
+      code.hljs.shell
+        | $ create-react-app
+        | $ ...
+        | $ yarn run build
+    div build.js 166kb - 48kb gzipped
+  section
+    a(target='_blank' href='https://github.com/vuejs/vue-devtools') https://github.com/vuejs/vue-devtools
+    img.inline-pic(src=require('../images/chrome.png'))
+  section
+    h4 Official Docs
+    ul
+      li
+        | Single File Components: 
+        a(target='_blank' href='https://vuejs.org/v2/guide/single-file-components.html', rel='nofollow') https://vuejs.org/v2/guide/single-file-components.html
+      li
+        | Render Functions:
+        a(target='_blank' href='https://vuejs.org/v2/guide/render-function.html') https://vuejs.org/v2/guide/render-function.html
+      li
+        | Vue CLI
+        a(target='_blank' href='https://github.com/vuejs/vue-cli') https://github.com/vuejs/vue-cli
+      li
+        | Vue template webpack
+        a(target='_blank' href='https://github.com/vuejs/vue-cli') https://github.com/vuejs/vue-cli
