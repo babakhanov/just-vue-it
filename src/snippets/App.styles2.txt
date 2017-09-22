@@ -1,0 +1,14 @@
+<template>
+ ...
+</template>
+<script>
+  ...
+</script>
+
+<style scoped>
+$text-color: black;
+
+div {
+  color: black;
+}
+</style>

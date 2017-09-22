@@ -1,0 +1,15 @@
+<template lang='pug'>
+div
+  button.btn.btn-success Click me
+</template>
+<script>
+  ...
+</script>
+
+<style lang='scss'>
+$text-color: black;
+
+div {
+  color: black;
+}
+</style>

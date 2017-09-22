@@ -1,0 +1,71 @@
+section
+  section
+    h1 Components Overview
+  section
+    h4 Hello From Component
+    iframe(width="100%" height="500" src="//jsfiddle.net/babakhanov/ujma4q0m/1/embedded/js,html,result/" allowfullscreen="allowfullscreen" frameborder="0")
+  section
+    h4 Registering components
+    iframe(width="100%" height="500" src="//jsfiddle.net/babakhanov/tmxzv3mz/2/embedded/js,html,result/" allowfullscreen="allowfullscreen" frameborder="0")
+  section
+    h4 Dynamic components
+    iframe(width="100%" height="500" src="//jsfiddle.net/babakhanov/jkc3a1sx/3/embedded/js,html,result/" allowfullscreen="allowfullscreen" frameborder="0")
+  section
+    h4 main.js
+    pre
+      code.hljs.javascript
+        = require('raw-loader!../snippets/vuemain.js.txt')
+  section
+    h4 App.vue (Root component)
+    pre
+      code.hljs.xml
+        = require('raw-loader!../snippets/App2.vue.txt')
+  section
+    h4 pug and node-sass
+    pre
+      code.hljs.xml
+        = require('raw-loader!../snippets/App.styles.txt')
+  section
+    h4 scoped styles
+    pre
+      code.hljs.xml
+        = require('raw-loader!../snippets/App.styles2.txt')
+  section
+    h4 scoped styles
+    img.inline-pic(src=require('../images/scopedStyles.png'))
+
+  section
+    h4 Folder stricture
+    pre
+      code.hljs.
+        src/
+        -- components/
+        ---- shared/
+        ------ Header.vue
+        ---- Dropdown.vue
+        ---- auth/
+        ------ SignIn.vue
+        ------ SignUn.vue
+        main.js
+        App.vue
+  section
+    h4 Alternative folder stricture
+    pre
+      code.hljs.
+        src/
+        -- auth/
+        ------ SignIn.vue
+        ------ SignUn.vue
+        -- user/
+        ------ Profile.vue
+        ------ EditProfile.vue
+        -- shared/
+        ------ Dropdown.vue
+        main.js
+        App.vue
+  section
+    h4 Official Docs
+    ul
+      li
+        | Dynamic Component
+        a(target='_blank' href='https://vuejs.org/v2/guide/components.html#Dynamic-Components') https://vuejs.org/v2/guide/components.html#Dynamic-Components
