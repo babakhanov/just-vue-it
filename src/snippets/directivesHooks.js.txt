@@ -1,0 +1,17 @@
+Vue.directive('highlight', {
+  bind (el, binding, vnode) {
+    // Once directive is attached
+  },
+  inserted (el, binding, vnode) {
+    // Inseted in a parent node
+  },
+  updated (el, binding, vnode, oldVnode) {
+    // Once component is updated (without children)
+  },
+  componentUpdated (el, binding, vnode, oldVnode) {
+    // Once component is updated (with children)
+  },
+  unbind (el, binding, node) {
+    // Once directive is removed
+  }
+});

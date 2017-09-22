@@ -1,0 +1,28 @@
+section
+  section
+    h1 Directives
+  section
+    h4 Directives
+    ul
+      li v-on
+      li v-for
+      li v-model
+      li v-if
+      li v-show
+      li ...
+    div v-[name of directive]:[argument].[modifier][modifier]
+    div e.g. v-on:submit.prevent='customSubmit'
+  section
+    h4 Hooks functions (like lifecycle hooks)
+    pre
+      code.hljs.javascript
+        = require('raw-loader!../snippets/directivesHooks.js.txt')
+  section
+    h4 v-hightlight custom directive
+    iframe(width="100%" height="500" src="//jsfiddle.net/babakhanov/bsc2x72g/1/embedded/js,html,result/" allowfullscreen="allowfullscreen" frameborder="0")
+  section
+    h4 Docs
+    ul
+      li
+        ='Custom Directives '
+        a(target='_black' href='https://vuejs.org/v2/guide/custom-directive.html') https://vuejs.org/v2/guide/custom-directive.html

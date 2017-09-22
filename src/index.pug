@@ -5,14 +5,7 @@ html
   body
     .reveal
       .slides
-        section
-          section
-            h3 Vue.JS
-            img.inline-pic(src=require('./images/logo.png'))
-            div
-          section
-            img.inline-pic(src=require('./images/vue.jpg'))
-
+        include ../src/slides/start.pug
         include ../src/slides/dom.pug
         include ../src/slides/lists.pug
         include ../src/slides/vue-instance.pug
@@ -20,14 +13,8 @@ html
         include ../src/slides/components.pug
         include ../src/slides/components_communicate.pug
         include ../src/slides/slots.pug
-
-        section
-          section
-            h1 Forms
-
-        section
-          section
-            h1 Directives
+        include ../src/slides/forms.pug
+        include ../src/slides/directives.pug
 
         section
           section
