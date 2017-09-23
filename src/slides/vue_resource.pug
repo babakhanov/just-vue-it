@@ -1,0 +1,30 @@
+section
+  section
+    h1 Vue Resource
+    pre
+      code.hljs.javascript.
+        import Vue from 'vue'
+        import App from './App.vue'
+        import VueResouce from 'vue-reource';
+
+        Vue.use(VueResource); // it's how to use plugins
+
+        new Vue({
+          el: '#app',
+          render: h => h(App)
+        })
+  section
+    h4 this.$http
+    iframe(width="100%" height="300" src="//jsfiddle.net/babakhanov/raLLLfzc/1/embedded/js,html,result/" allowfullscreen="allowfullscreen" frameborder="0")
+  section
+    h4 Docs
+    ul
+      li
+        =' Vue resource'
+        a(target='_blank' href='https://github.com/pagekit/vue-resource') https://github.com/pagekit/vue-resource
+      li
+        =' Some code receipes'
+        a(target='_blank' href='https://github.com/pagekit/vue-resource/blob/master/docs/recipes.md') https://github.com/pagekit/vue-resource/blob/master/docs/recipes.md
+      li
+        =' Requests and responses with different formats'
+        a(target='_blank' href='https://github.com/pagekit/vue-resource/blob/master/docs/http.md') https://github.com/pagekit/vue-resource/blob/master/docs/http.md
