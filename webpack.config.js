@@ -99,9 +99,13 @@ if (process.env.NODE_ENV === 'production') {
 
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
+      output: {
+        comments: false,
+      },
       compress: {
-        warnings: false
+        warnings: false,
+        drop_console: true,
+        unsafe:       true
       }
     }),
     new webpack.LoaderOptionsPlugin({

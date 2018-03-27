@@ -9,6 +9,19 @@ hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascri
 hljs.registerLanguage('shell', require('highlight.js/lib/languages/shell'));
 hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'));
 
+document.onkeydown = function(e) {
+  if (e.which === 40 && !document.getElementsByClassName('navigate-down')[0].disabled) return;
+  if (e.which === 38 && !document.getElementsByClassName('navigate-up')[0].disabled) return;
+  setTimeout(function(){
+      if (e.which === 40 && document.getElementsByClassName('navigate-down')[0].disabled) {
+        document.getElementsByClassName('navigate-right')[0].click();
+      } else if (e.which === 38 && document.getElementsByClassName('navigate-up')[0].disabled) {
+        document.getElementsByClassName('navigate-left')[0].click();
+      }
+  })
+}
+
+
 Reveal.initialize({
   history: true,
   controls: true,
